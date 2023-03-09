@@ -1,13 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=CK">
     <title>DARCKNET</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .img {
+            z-index: 10;
+            display: flex;
+            position: absolute;
+            animation: img both 8s;
+        }
+
+        @keyframes img {
+            0% {
+                opacity: 100%;
+            }
+
+            100% {
+                opacity: 0%;
+                z-index: 0;
+            }
+        }
+
+        .img1 {
+            display: flex;
+            position: absolute;
+            animation: img1 both 8s;
+        }
+
+        @keyframes img1 {
+            0% {
+                opacity: 0%;
+            }
+
+            100% {
+                opacity: 100%;
+                z-index: 0;
+            }
+        }
+
+        .img3 {
+            display: flex;
+            z-index: 10;
+            position: absolute;
+            translate: x(0px) y(0px);
+            animation: img3 infinite 10s;
+        }
+
+        @keyframes img3 {
+            0% {}
+
+            25% {
+                transform: x(0px) y(-500px);
+            }
+
+            50% {
+                transform: x(-500px) y(-500px);
+            }
+
+            75% {
+                transform: x(-500px) y(0px);
+            }
+
+            100% {
+                transform: x(0px) y(0px);
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <img src="masq2.png" alt="" class="img" height="500px">
+    <img src="masq2.png" alt="" class="img1" height="500px">
+    <img src="masq2.png" alt="" class="img3" height="10px">
     <header>
         <h1>WELCOME TO<strong> DARKNET</strong></h1>
         <nav>
@@ -15,14 +84,17 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="quisommesnous/">Qui sommes nous ?</a></li>
                 <li><a href="notrehistoire/">Notre histoire</a></li>
-                <li><a href="index.html">Nos produits</a></li>
+                <li><a href="nosproduits">Nos produits</a></li>
             </ul>
         </nav>
     </header>
     <footer>
-        <p>Darknet est un site fictif créé dans le cadre d'un projet de formation.</p>
-        <p>Il n'a aucun but lucratif et ne vend aucun produit.</p>
-        <p>Il est destiné à un public averti.</p>
+        <div class="contener">
+            <p>Darknet est un site fictif créé dans le cadre d'un projet de formation.</p>
+            <p>Il n'a aucun but lucratif et ne vend aucun produit.</p>
+            <p>Il est destiné à un public averti.</p>
+        </div>
     </footer>
 </body>
+
 </html>

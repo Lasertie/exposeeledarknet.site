@@ -2,7 +2,7 @@
 body {
     background-color: #000000;
     color: #ffffff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Arial Black";
     font-size: 14px;
     line-height: 1.42857143;
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #000000;
+    background-color: #0000008a;
     color: #ffffff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -101,7 +101,25 @@ p {
 footer {
     margin-top: 20px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     display: flex;
     position: fixed;
+    background-color: #242424;
+    width: 100%;
     bottom: 10px;
+}
+footer:hover {
+    cursor: help;
+}
+.contener {
+    position: static;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
 }
