@@ -1,0 +1,107 @@
+/* Theme Name: Le darknet */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+p {
+    margin: 0 0 10px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: brown;
+    display: flex;
+}
+
+li {
+    margin: 10px 10px 10px;
+    display: inline-block;
+
+}
+
+li:hover {
+    background-color: tomato;
+    color: #000000;
+}
+
+p {
+    margin: 0 0 10px;
+    width: 80%;
+    text-align: center;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+}
