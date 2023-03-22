@@ -44,30 +44,25 @@
         }
 
         .img3 {
-            display: flex;
             z-index: 10;
-            position: absolute;
-            translate: x(0px) y(0px);
             animation: img3 infinite 10s;
         }
 
         @keyframes img3 {
-            0% {}
-
+            0% {
+                translate: x(0px) y(0px);
+            }
             25% {
-                transform: x(0px) y(-500px);
+                translate: x(0px) y(-500px);
             }
-
             50% {
-                transform: x(-500px) y(-500px);
+                translate: x(100%) y(-500px);
             }
-
             75% {
-                transform: x(-500px) y(0px);
+                translate: x(100%) y(0px);
             }
-
             100% {
-                transform: x(0px) y(0px);
+                translate: x(0px) y(0px);
             }
         }
     </style>
@@ -78,13 +73,13 @@
     <img src="masq2.png" alt="" class="img1" height="500px">
     <img src="masq2.png" alt="" class="img3" height="10px">
     <header>
-        <h1>WELCOME TO<strong> DARKNET</strong></h1>
+        <h1>WELCOME TO <strong>DARKNET</strong></h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="quisommesnous/">Qui sommes nous ?</a></li>
                 <li><a href="notrehistoire/">Notre histoire</a></li>
-                <li><a href="nosproduits">Nos produits</a></li>
+                <li><a href="lemasque">Le Masque</a></li>
             </ul>
         </nav>
     </header>
