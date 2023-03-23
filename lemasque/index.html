@@ -8,12 +8,12 @@
     <title>Nos Principes</title>
     <style>
         model-viewer {
-            max-height: 30vh;
+            max-height: 50vh;
             max-width: 100vw;
             margin: 0;
             padding: 0;
             background-color: #000;
-            height: 30vh;
+            height: 50vh;
             width: 100vw;
         }
     </style>
@@ -21,72 +21,8 @@
 
 <body>
     <h1>Le Masque "Anonymous"</h1>
-    <!-- Import the component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-    <!-- Use it like any other HTML element -->
     <model-viewer id="maskk" interaction-prompt="none" alt="Mask" src="../maskvertical.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
-        <!-- camera-controls auto-rotate camera-orbit="0deg 90deg 0m" camera-target="0m 0m 0m" exposure="1.5"
-        shadow-intensity="1.0" shadow-softness="1.0" shadow-fov="75deg" shadow-radius="100.0" shadow-camera-near="0.1"
-        shadow-camera-far="1000.0" shadow-camera-top="0.0" shadow-camera-right="0.0" shadow-camera-bottom="0.0"
-        shadow-camera-left="0.0" shadow-camera-visible="false" shadow-camera-debug="false"
-        shadow-camera-helper-visible="false" shadow-camera-helper-size="1.0" shadow-camera-helper-color="#ffffff"
-        shadow-camera-helper-opacity="0.5" object-orientation="-90deg 0deg 0deg" interaction-policy="allow-when-focused"
-        interaction-prompt="allow-when-focused" interaction-prompt-threshold="0.5" interaction-prompt-style="auto"
-        interaction-prompt-distance="1.0" interaction-prompt-duration="1.0" interaction-prompt-timeout="0.0"
-        interaction-prompt-max="1" interaction-prompt-visibility="0.0" interaction-prompt-opacity="0.0"
-        interaction-prompt-scale="1.0" interaction-prompt-rotation="0deg" interaction-prompt-position="0m 0m 0m"
-        interaction-prompt-offset="0m 0m 0m" interaction-prompt-offset-rotation="0deg"
-        interaction-prompt-offset-scale="1.0" interaction-prompt-offset-position="0m 0m 0m"
-        interaction-prompt-offset-distance="0.0" interaction-prompt-offset-duration="0.0"
-        interaction-prompt-offset-timeout="0.0" interaction-prompt-offset-max="1"
-        interaction-prompt-offset-visibility="0.0" interaction-prompt-offset-opacity="0.0"
-        interaction-prompt-offset-scale="1.0" interaction-prompt-offset-rotation="0deg"
-        interaction-prompt-offset-position="0m 0m 0m" interaction-prompt-offset-distance="0.0"
-        interaction-prompt-offset-duration="0.0" interaction-prompt-offset-timeout="0.0"
-        interaction-prompt-offset-max="1" interaction-prompt-offset-visibility="0.0"
-        interaction-prompt-offset-opacity="0.0" interaction-prompt-offset-scale="1.0"
-        interaction-prompt-offset-rotation="0deg" interaction-prompt-offset-position="0m 0m 0m"
-        interaction-prompt-offset-distance="0.0" interaction-prompt-offset-duration="0.0"
-        interaction-prompt-offset-timeout="0.0" interaction-prompt-offset-max="1"
-        interaction-prompt-offset-visibility="0.0" interaction-prompt-offset-opacity="0.0"
-        interaction-prompt-offset-scale="1.0" interaction-prompt-offset-rotation="0deg"
-        interaction-prompt-offset-position="0m 0m 0m" interaction-prompt-offset-distance="0.0"
-        interaction-prompt-offset-duration="0.0"></model-viewer>-->
-    <script type="module">
-        const modelViewerTexture = document.querySelector("model-viewer#maskk");
-        const textureName = document.querySelector('#texture-name');
-        const imageName = document.querySelector('#image-name');
-        
-        modelViewerTexture.addEventListener("load", () => {
-        
-          const material = modelViewerTexture.model.materials[0];
-        
-          const createAndApplyTexture = async (channel, event) => {
-            if (event.target.value == "None") {
-              // Clears the texture.
-              material[channel].setTexture(null);
-              // Display the names values
-              textureName.innerText = "None";
-              imageName.innerText = "None";
-            } else if (event.target.value) {
-              // Creates a new texture.
-              const texture = await modelViewerTexture.createTexture(event.target.value);
-              // Set the texture name
-              texture.name = event.target.options[event.target.selectedIndex].text.replace(/ /g, "_").toLowerCase();
-              // Applies the new texture to the specified channel.
-              material[channel].setTexture(texture);
-              // Display the names values
-              textureName.innerText = texture.name;
-              imageName.innerText = texture.source.name;
-            }
-          }
-        
-          document.querySelector('#normals2').addEventListener('input', (event) => {
-            createAndApplyTexture('baseColorTexture', event);
-          });
-        });
-        
-        </script>
     <p>Le masque de Salvador Dali est une pièce d'art très connue, créée par le célèbre peintre surréaliste Salvador
         Dali en 1931. Bien que cette œuvre d'art soit souvent considérée comme une expression artistique fascinante,
         elle a également été utilisée dans le cadre du darknet pour symboliser l'anonymat et le mystère.</p>
