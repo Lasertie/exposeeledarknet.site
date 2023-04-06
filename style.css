@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    border-radius: 20px;
 }
 
 header {
@@ -71,6 +72,9 @@ h6 {
 }
 p {
     margin: 0 0 10px;
+    width: 80%;
+    text-align: justify;
+    background-color: #0000008a;
 }
 
 ul {
