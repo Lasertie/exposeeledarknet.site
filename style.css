@@ -13,6 +13,8 @@ body {
     min-height: 100vh;
     border-radius: 20px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header {
@@ -72,6 +74,10 @@ h6 {
     font-size: 12px;
 }
 p {
+    margin: 0 0 10px;
+}
+
+p .txt {
     margin: 0 0 10px;
     width: 80%;
     text-align: justify;
