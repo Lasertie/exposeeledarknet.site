@@ -16,22 +16,23 @@
 </head>
 
 <body>
-    <button class="pleinecran_bouton">Plein écran</button>
-    <script>
-        const boutonPleinecran = document.querySelector('.pleinecran__bouton');
-        const page = document.querySelector('body');
+    <div class="pleinecran">
+        <button class="pleinecran_bouton">Plein écran</button>
+        <script>
+            const boutonPleinecran = document.querySelector('.pleinecran__bouton');
+            const page = document.querySelector('body');
 
-        boutonPleinecran.addEventListener('click', () => {
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-                postMessage('nofullscreenchange', '*');
-            } else {
-                page.requestFullscreen();
-                postMessage('fullscreenchange', '*');
-
-            }
-        });
-    </script>
+            boutonPleinecran.addEventListener('click', () => {
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                    postMessage('nofullscreenchange');
+                } else {
+                    page.requestFullscreen();
+                    postMessage('fullscreenchange');
+                }
+            });
+        </script>
+    </div>
     <H1>Qui sommes nous ?</H1>
     <p class="txt">
         Le Darknet est une partie cachée d'Internet qui n'est pas accessible par les moteurs de recherche traditionnels

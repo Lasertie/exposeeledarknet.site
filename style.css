@@ -37,6 +37,7 @@ header {
 a {
     color: #ffffff;
     text-decoration: none;
+    height: 100%;
 }
 a:hover, a:focus {
     color: #ffffff;
