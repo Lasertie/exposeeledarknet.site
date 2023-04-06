@@ -16,8 +16,25 @@
 </head>
 
 <body>
+    <button class="pleinecran_bouton">Plein écran</button>
+    <script>
+        const boutonPleinecran = document.querySelector('.pleinecran__bouton');
+        const page = document.querySelector('body');
+
+        boutonPleinecran.addEventListener('click', () => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+                postMessage('nofullscreenchange', '*');
+            } else {
+                page.requestFullscreen();
+                postMessage('fullscreenchange', '*');
+
+            }
+        });
+    </script>
     <H1>Qui sommes nous ?</H1>
-    <p class="txt">Le Darknet est une partie cachée d'Internet qui n'est pas accessible par les moteurs de recherche traditionnels
+    <p class="txt">
+        Le Darknet est une partie cachée d'Internet qui n'est pas accessible par les moteurs de recherche traditionnels
         ou les navigateurs web courants. Il est souvent associé à des activités illégales, mais il existe également des
         raisons légitimes pour lesquelles les gens peuvent y accéder, notamment pour protéger leur vie privée et leur
         sécurité. Les utilisateurs du Darknet utilisent des réseaux privés virtuels (VPN) et des réseaux de routage en

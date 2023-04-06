@@ -15,8 +15,24 @@
 </head>
 
 <body>
+    <button class="pleinecran_bouton">Plein écran</button>
+    <script>
+        const boutonPleinecran = document.querySelector('.pleinecran__bouton');
+        const page = document.querySelector('body');
+
+        boutonPleinecran.addEventListener('click', () => {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+                postMessage('nofullscreenchange');
+            } else {
+                page.requestFullscreen();
+                postMessage('fullscreenchange');
+            }
+        });
+    </script>
     <h1>L'histoire du darknet</h1>
-    <p class="txt">Le darknet est un réseau privé et décentralisé qui est apparu dans les années 1970. À cette époque, ARPANET, le
+    <p class="txt">Le darknet est un réseau privé et décentralisé qui est apparu dans les années 1970. À cette époque,
+        ARPANET, le
         prédécesseur d'Internet, avait été créé pour permettre aux chercheurs et aux scientifiques de partager des
         informations et de collaborer à distance. Cependant, certains groupes de hackers ont commencé à créer des
         réseaux informatiques privés pour partager des informations et des logiciels sans être détectés.
