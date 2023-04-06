@@ -71,13 +71,21 @@
             opacity: 0;
             display: flex;
         }
+        .pleinecran__bouton {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <!-- Option plein ecran -->
     <div class="pleinecran">
-        <button class="pleinecran__bouton">Plein écran</button>
+        <button class="pleinecran_bouton">Plein écran</button>
         <script>
             const boutonPleinecran = document.querySelector('.pleinecran__bouton');
             const page = document.querySelector('body');
@@ -85,8 +93,10 @@
             boutonPleinecran.addEventListener('click', () => {
                 if (document.fullscreenElement) {
                     document.exitFullscreen();
+                    postMessage('nofullscreenchange');
                 } else {
                     page.requestFullscreen();
+                    postMessage('fullscreenchange');
                 }
             });
         </script>
